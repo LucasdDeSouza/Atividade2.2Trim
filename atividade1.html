@@ -5,17 +5,17 @@
     Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
     */
 
-    //ENTRADA
-    let nume1= Number(prompt(`Insira um número inteiro`))
-    let nume2= Number(prompt(`Insira um segundo número inteiro`))
+    const numero1 = parseInt(prompt("Digite um número inteiro:"));
+    const numero2 = parseInt(prompt("Digite um número inteiro:"));
 
-    //PROCESSAMENTO
-    const nume3= nume1;
-     num1= nume2;
-     num2= nume3.
 
-    //SAÍDA
-    alert(``)
+    alert("Valores antes da troca:\nNúmero 1: " + numero1 + "\nNúmero 2: " + numero2);
 
-    
+    if (numero1 !== numero2) {
+
+        [numero1, numero2] = [numero2, numero1];
+    }
+
+    alert("Valores depois da troca:\nNúmero 1: " + numero1 + "\nNúmero 2: " + numero2)
+
 </script>

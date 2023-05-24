@@ -7,11 +7,47 @@
     Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
     */
     //0,5 na prova: Eduardo de Oliveira
-    //ENTRADA
 
-    
-    //PROCESSAMENTO
+    const valorSaque = parseInt(prompt("Digite o valor do saque (entre 10 e 600 reais):"));
 
-    //SAÍDA
 
+    if (valorSaque >= 10 && valorSaque <= 600) {
+
+        let notas100 = 0;
+        let notas50 = 0;
+        let notas10 = 0;
+        let notas5 = 0;
+        let notas1 = 0;
+
+
+        while (valorSaque >= 100) {
+            notas100++;
+            valorSaque -= 100;
+        }
+
+        while (valorSaque >= 50) {
+            notas50++;
+            valorSaque -= 50;
+        }
+
+        while (valorSaque >= 10) {
+            notas10++;
+            valorSaque -= 10;
+        }
+
+        while (valorSaque >= 5) {
+            notas5++;
+            valorSaque -= 5;
+        }
+
+        while (valorSaque >= 1) {
+            notas1++;
+            valorSaque -= 1;
+        }
+
+
+        alert(`Notas de 100: ${notas100}\nNotas de 50: ${notas50}\nNotas de 10: ${notas10}\nNotas de 5: ${notas5}\nNotas de 1: ${notas1}`);
+    } else {
+        alert("Valor inválido. Digite um valor entre 10 e 600 reais.");
+    }
 </script>
