@@ -6,12 +6,23 @@
         //- até 1500(inclusive): aumento de 10 %
         //- acima de 1500: aumento de 5 %
     
-    // Entrada
-
-    
-    // Processamento
-
-    
-    // Saída
-
+        const preco = Number(prompt(`Insira o preço do produto`))
+        let aumento = 0
+        if (preco <= 280) {
+            aumento = preco + (preco *  20) / 100
+            document.write (`Até 280 reais o aumento é de 20%, o preço total é de ${aumento}`)
+        }
+        else if (preco <= 700 && preco > 280) {
+            aumento = preco + (preco *  15) / 100
+            document.write (`Até 700 reais o aumento é de 15%, o preço total é de ${aumento}`)
+        }
+        else if (preco <= 1500 && preco > 700) {
+            aumento = preco + (preco *  10) / 100
+            document.write (`Até 1500 reais o aumento é de 10%, o preço total é de ${aumento}`)
+        }
+        else if (preco > 1500) {
+            aumento = preco + (preco *  5) / 100
+            document.write (`Depois de 1500 reais o aumento é de 5%, o preço total é de ${aumento}`)
+        }
+   
 </script>
