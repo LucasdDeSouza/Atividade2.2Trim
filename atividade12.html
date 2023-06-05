@@ -6,12 +6,25 @@
     // - cães de porte médio: fator 6
     // - cães grandes: fator 7.
 
-    // Entrada
+    const T = prompt("Seu cachorro é de que porte? Responda (P), (M) ou (G) para os tamanhos pequeno, médio ou grande.").toLocaleUpperCase().trim();
 
-    
-    // Processamento
+if (T === "P" || T == "M" || T === "G") {
+ var Ida = Number(prompt("Quantos anos de vida tem seu cachorro?").trim());
 
-    
-    // Saída
+ if (T == "P") {
+    var Ida = Ida * 5;
+ }
 
+ else if (T == "M") {
+    var Ida = Ida * 6;
+ }
+
+ else if (T == "G") {
+    var Ida = Ida * 7;
+ }
+
+ document.write(`A  dele é ${Ida}`);
+} else {
+    document.write("Por acaso seu cachorro é um Humano?");
+}
 </script>

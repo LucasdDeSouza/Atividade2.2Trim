@@ -5,13 +5,69 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+    const m = Number(prompt("Informe o mês em número").trim());
+    const d = Number(prompt("Informe o dia").trim());
+    const h = prompt("Informe o hemisfério em que você está (S) para Sul, e (N) para Norte").toLocaleUpperCase().trim()
 
+    if (m >= 1 && m <= 12 && d >= 1 && d <= 31) {
 
-    //PROCESSAMENTO
+        if (h == "N" || h == "S") {
 
-    
-    //SAÍDA
+            if (h == "N") {
 
+                //verão
+                if (m === 6 && d >= 21 || m === 9 && d < 23 || m > 6 && m < 9) {
+                    document.write("É Verão!")
+                }
+
+                //Outono
+                if (m === 9 && d >= 23 || m === 12 && d < 21 || m > 9 && m < 12) {
+                    document.write("É Outono!")
+                }
+
+                //Inverno
+                if (m === 12 && d >= 21 || m === 3 && d < 20 || m <= 3) {
+                    document.write("É Inverno!")
+                }
+
+                //Primavera
+
+                if (m === 3 && d >= 20 || m === 6 && d < 21 || m > 3 && m < 6) {
+                    document.write("É Primavera!")
+                }
+
+            }
+
+            if (hemisferio == "S") {
+
+                //verão
+                if (m === 12 && d >= 21 || m === 3 && d < 20 || m <= 3) {
+                    document.write("É Verão!")
+                }
+
+                //Outono
+                if (m === 3 && d >= 20 || m === 6 && d < 21 || m > 3 && m < 6) {
+                    document.write("É Outono!")
+                }
+
+                //Inverno
+                if (m === 6 && d >= 21 || m === 9 && d < 22 || m > 6 && m < 9) {
+                    document.write("É Inverno!")
+                }
+                //Primavera
+
+                if (m === 9 && d >= 22 || m === 12 && d < 21 || m > 9 && m < 12) {
+                    document.write("É Primavera!")
+                }
+
+            }
+        } else {
+            document.write("Só existe dois hemisférios na terra, você é de qual planeta?");
+        }
+    } else {
+        document.write("Eu acho que era bom estudar um pouquinho!");
+    }
+
+</script>
 
 </script>

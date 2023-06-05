@@ -10,10 +10,36 @@
     O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
     */
 
-    //ENTRADA
+    alert("Responda as perguntas com 'S' ou 'N'");
+  const p1 = prompt("Telefonou para vítima?").toLocaleUpperCase().trim();
+  const p2 = prompt("Esteve no local do crime").toLocaleUpperCase().trim();
+  const p3 = prompt("Mora perto da vítima?").toLocaleUpperCase().trim();
+  const p4 = prompt("Devia para a vítima?").toLocaleUpperCase().trim();
+  const p5  = prompt("Já trabalhou com a vítima?").toLocaleUpperCase().trim();
+  let valor = 0;
 
-    //PROCESSAMENTO
+  p1 == "S" ? v1 = 1 : v1 = 0;
+  p2 == "S" ? v2 = 1 : v2 = 0;
+  p3 == "S" ? v3 = 1 : v3 = 0;
+  p4 == "S" ? v4 = 1 : v4 = 0;
+  p5 == "S" ? v5 = 1 : v5 = 0;
 
-    //SAÍDA
+  const Resultado = v1 + v2 + v3 + v4 + v5;
+
+  if (Resultado < 2) {
+    document.write("Você é inocente");
+  }
+
+  else if (Resultado === 2) {
+    document.write("Você é um suspeito");
+  }
+
+  else if (Resultado > 2 && Resultado < 5) {
+    document.write("Você é um cúmplice");
+  }
+
+  else if (Resultado === 5) {
+    document.write("Você é o assassino");
+  }
 
 </script>
